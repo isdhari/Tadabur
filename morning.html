@@ -49,13 +49,7 @@
 <!-- Navbar -->
 <nav class="w-full bg-white shadow-sm py-4 px-6 flex items-center justify-between sticky top-0 z-50">
 
-    <!-- زر قائمة الجوال -->
-    <button id="menuBtn" class="md:hidden text-3xl text-emerald-700">
-        ☰
-    </button>
-
-    <!-- الروابط (مخفيه في الجوال – تظهر في الكمبيوتر) -->
-    <div class="hidden md:flex items-center gap-4 text-lg font-medium">
+    <div class="flex items-center gap-4 text-lg font-medium">
 
         <a href="index.html" class="nav-item">الرئيسية</a>
         <a href="morning.html" class="nav-item">اذكار الصباح</a>
@@ -68,11 +62,10 @@
     </div>
 
     <div>
-        <img src="images/tadabbur_log.png" alt="Tadabbur Logo" style="width: 70px;">
-    </div>
+    <img src="images/tadabbur_log.png" alt="Tadabbur Logo" style="width: 70px;">
+</div>
 
 </nav>
-
 
 <!-- Title -->
 <section class="text-center mt-10">
@@ -139,19 +132,6 @@
         if (link.getAttribute("href") === currentPage) {
             link.classList.add("active");
         }
-    });
-</script>
-<script>
-    const menuBtn = document.getElementById("menuBtn");
-    const sidebar = document.getElementById("sidebar");
-    const closeSidebar = document.getElementById("closeSidebar");
-
-    menuBtn.addEventListener("click", () => {
-        sidebar.classList.remove("translate-x-full");
-    });
-
-    closeSidebar.addEventListener("click", () => {
-        sidebar.classList.add("translate-x-full");
     });
 </script>
 
