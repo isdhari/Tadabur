@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تدبر - الأذكار والعبادة</title>
+
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Icons -->
+    <link href="https://unpkg.com/lucide-static/font/lucide.css" rel="stylesheet">
+
+    <style>
+        body {
+            background: linear-gradient(to bottom right, #f0fdfa, #fefce8);
+            font-family: 'Tajawal', sans-serif;
+        }
+
+        .nav-item {
+            padding: 10px 18px;
+            border-radius: 12px;
+            font-weight: 600;
+            transition: 0.2s;
+        }
+
+        .nav-item:hover {
+            background-color: #f0fdfa;
+            color: #059669;
+        }
+
+        .nav-item.active {
+            background-color: #059669;
+            color: white !important;
+            border-radius: 14px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+        }
+    </style>
+
+    <!-- خط Tajawal -->
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- TOP BANNER -->
+<div class="w-full bg-emerald-700 text-center py-3">
+    <p class="text-white font-semibold text-lg">
+        اللهم اجعل هذا العمل في ميزان حسنات اجدادي و باسل رحمهم الله
+    </p>
+</div>
+
+<!-- Navbar -->
+<nav class="w-full bg-white shadow-sm py-4 px-6 flex items-center justify-between sticky top-0 z-50">
+
+    <div class="flex items-center gap-4 text-lg font-medium">
+
+        <a href="index.html" class="nav-item">الرئيسية</a>
+        <a href="morning.html" class="nav-item">اذكار الصباح</a>
+        <a href="evening.html" class="nav-item">اذكار المساء</a>
+        <a href="prayer.html" class="nav-item">اذكار بعد الصلاة</a>
+        <a href="alkahf.html" class="nav-item">سورة الكهف</a>
+        <a href="friday.html" class="nav-item">سنن يوم الجمعه</a>
+        <a href="counter.html" class="nav-item">العداد</a>
+
+    </div>
+
+   <div>
+    <img src="images/tadabbur_log.png" alt="Tadabbur Logo" style="width: 70px;">
+</div>
+
+
+</nav>
+
+<!-- Hero -->
+<section class="text-center mt-10">
+    <h1 class="text-4xl font-bold text-emerald-900">تدبر</h1>
+    <p class="text-emerald-700 mt-2">رفيقك في الذكر والعبادة</p>
+    <div class="text-yellow-500 mt-1 text-xl">✨</div>
+</section>
+
+<!-- Cards -->
+<div class="max-w-5xl mx-auto mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 px-4">
+
+    <!-- الكهف -->
+    <a href="alkahf.html"
+       class="bg-white border border-emerald-200 hover:border-emerald-300 rounded-2xl p-6 shadow-sm hover:shadow-lg transition flex flex-col items-center cursor-pointer">
+        <div class="bg-emerald-500 text-white p-4 rounded-xl text-3xl mb-4">
+            📗
+        </div>
+        <h3 class="font-bold text-xl text-emerald-900">سورة الكهف</h3>
+        <p class="text-sm text-emerald-700 mt-1">نور يوم الجمعة</p>
+    </a>
+
+    <!-- المساء -->
+    <a href="evening.html"
+       class="bg-white border border-purple-300 hover:border-purple-400 rounded-2xl p-6 shadow-sm hover:shadow-lg transition flex flex-col items-center cursor-pointer">
+        <div class="bg-purple-500 text-white p-4 rounded-xl text-3xl mb-4">
+            🌙
+        </div>
+        <h3 class="font-bold text-xl text-gray-900">أذكار المساء</h3>
+        <p class="text-sm text-gray-700 mt-1">اختم يومك بالذكر</p>
+    </a>
+
+    <!-- الصباح -->
+    <a href="morning.html"
+       class="bg-white border border-orange-300 hover:border-orange-400 rounded-2xl p-6 shadow-sm hover:shadow-lg transition flex flex-col items-center cursor-pointer">
+        <div class="bg-orange-500 text-white p-4 rounded-xl text-3xl mb-4">
+            ☀️
+        </div>
+        <h3 class="font-bold text-xl text-gray-900">أذكار الصباح</h3>
+        <p class="text-sm text-gray-700 mt-1">ابدأ يومك بذكر الله</p>
+    </a>
+
+    <!-- بعد الصلاة -->
+    <a href="prayer.html"
+       class="bg-white border border-indigo-200 hover:border-indigo-300 rounded-2xl p-6 shadow-sm hover:shadow-lg transition flex flex-col items-center cursor-pointer">
+        <div class="bg-indigo-500 text-white p-4 rounded-xl text-3xl mb-4">
+            📿
+        </div>
+        <h3 class="font-bold text-xl text-gray-900">أذكار بعد الصلاة</h3>
+        <p class="text-sm text-gray-700 mt-1">أذكار الصلوات الخمس</p>
+    </a>
+
+    <!-- العداد -->
+    <a href="counter.html"
+       class="bg-white border border-blue-200 hover:border-blue-300 rounded-2xl p-6 shadow-sm hover:shadow-lg transition flex flex-col items-center cursor-pointer">
+        <div class="bg-blue-500 text-white p-4 rounded-xl text-3xl mb-4">
+            🔢
+        </div>
+        <h3 class="font-bold text-xl text-gray-900">حاسبة الأذكار</h3>
+        <p class="text-sm text-gray-700 mt-1">عداد للتسبيح</p>
+    </a>
+
+    <!-- الجمعة -->
+    <a href="friday.html"
+       class="bg-white border border-pink-200 hover:border-pink-300 rounded-2xl p-6 shadow-sm hover:shadow-lg transition flex flex-col items-center cursor-pointer">
+        <div class="bg-pink-500 text-white p-4 rounded-xl text-3xl mb-4">
+            📅
+        </div>
+        <h3 class="font-bold text-xl text-gray-900">سنن يوم الجمعة</h3>
+        <p class="text-sm text-gray-700 mt-1">اغتنم فضل اليوم المبارك</p>
+    </a>
+
+</div>
+
+<!-- FOOTER -->
+<footer class="bg-emerald-800 text-white py-6 text-center mt-10">
+    <p class="text-yellow-300 font-bold text-lg">اللهم تقبل منا واجعله في ميزان حسناتنا</p>
+    <p class="text-white text-sm mt-2">جميع الحقوق محفوظة © 2025 - ضاري</p>
+</footer>
+
+<!-- JS لتفعيل لون الصفحة الحالية -->
+<script>
+    const currentPage = window.location.pathname.split("/").pop();
+    document.querySelectorAll(".nav-item").forEach(link => {
+        if (link.getAttribute("href") === currentPage) {
+            link.classList.add("active");
+        }
+    });
+</script>
+
+</body>
+</html>

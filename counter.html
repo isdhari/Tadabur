@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>عداد الأذكار - تدبر</title>
+
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+        body {
+            background: #f0faff;
+        }
+
+        .tap-area:active {
+            background: rgba(255, 255, 255, 0.15);
+        }
+    </style>
+</head>
+<body class="font-sans select-none">
+
+<!-- TOP BANNER -->
+<div class="w-full bg-emerald-700 text-center py-3">
+    <p class="text-white font-semibold text-lg">
+        اللهم اجعل هذا العمل خالصًا لوجهك الكريم
+    </p>
+</div>
+
+<!-- Navbar -->
+<nav class="w-full bg-white shadow-sm py-4 px-6 flex items-center justify-between sticky top-0 z-50">
+    <div class="flex items-center gap-6 text-lg font-semibold text-gray-700">
+
+        <a href="index.html" class="hover:text-emerald-600">الرئيسية</a>
+        <a href="morning.html" class="hover:text-emerald-600">اذكار الصباح</a>
+        <a href="evening.html" class="hover:text-emerald-600">اذكار المساء</a>
+        <a href="prayer.html" class="hover:text-emerald-600">اذكار بعد الصلاة</a>
+        <a href="alkahf.html" class="hover:text-emerald-600">سورة الكهف</a>
+        <a href="friday.html" class="hover:text-emerald-600">سنن يوم الجمعه</a>
+
+        <!-- الصفحة الحالية -->
+        <a href="counter.html" class="text-white bg-emerald-600 px-3 py-1 rounded-lg font-bold">
+            العداد
+        </a>
+
+    </div>
+
+    <div>
+    <img src="images/tadabbur_log.png" alt="Tadabbur Logo" style="width: 70px;">
+</div>
+
+</nav>
+
+<!-- Header -->
+<section class="text-center mt-10">
+    <h1 class="text-4xl font-bold text-emerald-900">عداد الأذكار</h1>
+    <p class="text-emerald-700 mt-2">اضغط للعد</p>
+    <div class="text-cyan-500 mt-1 text-xl">🔢</div>
+</section>
+
+<div class="max-w-xl mx-auto mt-10 px-4">
+
+    <!-- Target Selector -->
+    <div class="bg-white p-5 rounded-2xl shadow border border-cyan-200 mb-6">
+        <h3 class="text-center text-emerald-900 font-semibold mb-3">اختر العدد</h3>
+
+        <div class="flex justify-center gap-3 flex-wrap">
+            <button onclick="setTarget(33)"
+                    class="px-6 py-2 rounded-xl bg-cyan-100 hover:bg-cyan-200 text-cyan-800 font-bold">
+                33
+            </button>
+
+            <button onclick="setTarget(100)"
+                    class="px-6 py-2 rounded-xl bg-cyan-100 hover:bg-cyan-200 text-cyan-800 font-bold">
+                100
+            </button>
+
+            <input id="targetInput"
+                   type="number"
+                   min="1"
+                   value="33"
+                   onchange="setTarget(this.value)"
+                   class="w-24 px-3 py-2 rounded-xl text-center border border-cyan-300 font-bold text-cyan-900">
+        </div>
+    </div>
+
+    <!-- Counter Area -->
+    <div onclick="increment()"
+         class="tap-area bg-gradient-to-br from-cyan-500 to-blue-600 text-white p-12 rounded-3xl shadow-2xl cursor-pointer active:scale-95 transition-all text-center">
+        
+        <div id="countDisplay" class="text-7xl font-bold mb-3">0</div>
+        <div class="text-xl">من <span id="targetDisplay">33</span></div>
+        <div class="opacity-80 mt-1">متبقي: <span id="remainingDisplay">33</span></div>
+
+        <div id="doneMessage" class="text-yellow-300 text-2xl font-bold mt-3 hidden">
+            ✨ تم بحمد الله ✨
+        </div>
+    </div>
+
+    <!-- Controls -->
+    <div class="grid grid-cols-3 gap-4 mt-6">
+        <button onclick="decrement()"
+                class="h-16 rounded-xl bg-red-500 hover:bg-red-600 text-white font-bold text-xl">
+            -
+        </button>
+
+        <button onclick="resetCounter()"
+                class="h-16 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xl">
+            إعادة
+        </button>
+
+        <button onclick="increment()"
+                class="h-16 rounded-xl bg-cyan-600 hover:bg-cyan-700 text-white font-bold text-xl">
+            +
+        </button>
+    </div>
+
+    <!-- Common Zikr List -->
+    <div class="bg-white rounded-2xl p-6 shadow border border-emerald-200 mt-8">
+        <h3 class="text-xl font-bold text-emerald-900 mb-4 text-center">أذكار شائعة</h3>
+
+        <div class="space-y-3">
+            <div class="bg-emerald-50 p-4 rounded-xl border border-emerald-200 flex justify-between">
+                <span>سبحان الله</span><span class="bg-emerald-600 text-white px-3 py-1 rounded-lg">33×</span>
+            </div>
+
+            <div class="bg-emerald-50 p-4 rounded-xl border border-emerald-200 flex justify-between">
+                <span>الحمد لله</span><span class="bg-emerald-600 text-white px-3 py-1 rounded-lg">33×</span>
+            </div>
+
+            <div class="bg-emerald-50 p-4 rounded-xl border border-emerald-200 flex justify-between">
+                <span>الله أكبر</span><span class="bg-emerald-600 text-white px-3 py-1 rounded-lg">34×</span>
+            </div>
+
+            <div class="bg-emerald-50 p-4 rounded-xl border border-emerald-200 flex justify-between">
+                <span>سبحان الله وبحمده</span><span class="bg-emerald-600 text-white px-3 py-1 rounded-lg">100×</span>
+            </div>
+
+            <div class="bg-emerald-50 p-4 rounded-xl border border-emerald-200 flex justify-between">
+                <span>لا إله إلا الله وحده لا شريك له</span><span class="bg-emerald-600 text-white px-3 py-1 rounded-lg">100×</span>
+            </div>
+
+            <div class="bg-emerald-50 p-4 rounded-xl border border-emerald-200 flex justify-between">
+                <span>أستغفر الله</span><span class="bg-emerald-600 text-white px-3 py-1 rounded-lg">100×</span>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<br><br>
+
+<!-- JavaScript -->
+<script>
+    let count = 0;
+    let target = 33;
+
+    function updateUI() {
+        document.getElementById("countDisplay").textContent = count;
+        document.getElementById("targetDisplay").textContent = target;
+        document.getElementById("remainingDisplay").textContent = Math.max(target - count, 0);
+
+        if (count >= target) {
+            document.getElementById("doneMessage").classList.remove("hidden");
+        } else {
+            document.getElementById("doneMessage").classList.add("hidden");
+        }
+    }
+
+    function setTarget(value) {
+        target = Math.max(1, parseInt(value));
+        document.getElementById("targetInput").value = target;
+        updateUI();
+    }
+
+    function increment() {
+        count++;
+        updateUI();
+    }
+
+    function decrement() {
+        if (count > 0) count--;
+        updateUI();
+    }
+
+    function resetCounter() {
+        count = 0;
+        updateUI();
+    }
+
+    updateUI();
+</script>
+
+<!-- FOOTER -->
+<footer class="bg-emerald-800 text-white py-6 text-center mt-10">
+    <p class="text-yellow-300 font-bold text-lg">اللهم تقبل منا واجعله في ميزان حسناتنا</p>
+    <p class="text-white text-sm mt-2">جميع الحقوق محفوظة © 2025 - ضاري</p>
+</footer>
+
+</body>
+</html>
