@@ -52,7 +52,13 @@
 <!-- Navbar -->
 <nav class="w-full bg-white shadow-sm py-4 px-6 flex items-center justify-between sticky top-0 z-50">
 
-    <div class="flex items-center gap-4 text-lg font-medium">
+    <!-- زر قائمة الجوال -->
+    <button id="menuBtn" class="md:hidden text-3xl text-emerald-700">
+        ☰
+    </button>
+
+    <!-- الروابط (مخفيه في الجوال – تظهر في الكمبيوتر) -->
+    <div class="hidden md:flex items-center gap-4 text-lg font-medium">
 
         <a href="index.html" class="nav-item">الرئيسية</a>
         <a href="morning.html" class="nav-item">اذكار الصباح</a>
@@ -64,12 +70,12 @@
 
     </div>
 
-   <div>
-    <img src="images/tadabbur_log.png" alt="Tadabbur Logo" style="width: 70px;">
-</div>
-
+    <div>
+        <img src="images/tadabbur_log.png" alt="Tadabbur Logo" style="width: 70px;">
+    </div>
 
 </nav>
+
 
 <!-- Hero -->
 <section class="text-center mt-10">
