@@ -105,6 +105,19 @@
     <p class="text-yellow-300 font-bold text-lg">اللهم تقبل منا واجعله في ميزان حسناتنا</p>
     <p class="text-white text-sm mt-2">جميع الحقوق محفوظة © 2025 - ضاري</p>
 </footer>
+<script>
+    const menuBtn = document.getElementById("menuBtn");
+    const sidebar = document.getElementById("sidebar");
+    const closeSidebar = document.getElementById("closeSidebar");
+
+    menuBtn.addEventListener("click", () => {
+        sidebar.classList.remove("translate-x-full");
+    });
+
+    closeSidebar.addEventListener("click", () => {
+        sidebar.classList.add("translate-x-full");
+    });
+</script>
 
 </body>
 </html>
