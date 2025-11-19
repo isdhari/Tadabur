@@ -25,31 +25,31 @@
 
 <!-- Navbar -->
 <nav class="w-full bg-white shadow-sm py-4 px-6 flex items-center justify-between sticky top-0 z-50">
+    <div class="flex items-center gap-6 text-lg font-semibold text-gray-700">
 
-    <!-- زر قائمة الجوال -->
-    <button id="menuBtn" class="md:hidden text-3xl text-emerald-700">
-        ☰
-    </button>
+        <a href="index.html" class="hover:text-emerald-600">الرئيسية</a>
 
-    <!-- الروابط (مخفيه في الجوال – تظهر في الكمبيوتر) -->
-    <div class="hidden md:flex items-center gap-4 text-lg font-medium">
+        <a href="morning.html" class="hover:text-emerald-600">اذكار الصباح</a>
 
-        <a href="index.html" class="nav-item">الرئيسية</a>
-        <a href="morning.html" class="nav-item">اذكار الصباح</a>
-        <a href="evening.html" class="nav-item">اذكار المساء</a>
-        <a href="prayer.html" class="nav-item">اذكار بعد الصلاة</a>
-        <a href="alkahf.html" class="nav-item">سورة الكهف</a>
-        <a href="friday.html" class="nav-item">سنن يوم الجمعه</a>
-        <a href="counter.html" class="nav-item">العداد</a>
+        <a href="evening.html" class="hover:text-emerald-600">اذكار المساء</a>
 
+        <!-- الصفحة الحالية -->
+        <a href="prayer.html" class="text-white bg-emerald-600 px-3 py-1 rounded-lg font-bold">
+            اذكار بعد الصلاة
+        </a>
+
+        <a href="alkahf.html" class="hover:text-emerald-600">سورة الكهف</a>
+
+        <a href="friday.html" class="hover:text-emerald-600">سنن يوم الجمعه</a>
+
+        <a href="counter.html" class="hover:text-emerald-600">العداد</a>
     </div>
 
     <div>
-        <img src="images/tadabbur_log.png" alt="Tadabbur Logo" style="width: 70px;">
-    </div>
+    <img src="images/tadabbur_log.png" alt="Tadabbur Logo" style="width: 70px;">
+</div>
 
 </nav>
-
 
 <!-- Title -->
 <section class="text-center mt-10">
@@ -105,19 +105,6 @@
     <p class="text-yellow-300 font-bold text-lg">اللهم تقبل منا واجعله في ميزان حسناتنا</p>
     <p class="text-white text-sm mt-2">جميع الحقوق محفوظة © 2025 - ضاري</p>
 </footer>
-<script>
-    const menuBtn = document.getElementById("menuBtn");
-    const sidebar = document.getElementById("sidebar");
-    const closeSidebar = document.getElementById("closeSidebar");
-
-    menuBtn.addEventListener("click", () => {
-        sidebar.classList.remove("translate-x-full");
-    });
-
-    closeSidebar.addEventListener("click", () => {
-        sidebar.classList.add("translate-x-full");
-    });
-</script>
 
 </body>
 </html>
