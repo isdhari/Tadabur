@@ -27,27 +27,31 @@
 
 <!-- Navbar -->
 <nav class="w-full bg-white shadow-sm py-4 px-6 flex items-center justify-between sticky top-0 z-50">
-    <div class="flex items-center gap-6 text-lg font-semibold text-gray-700">
 
-        <a href="index.html" class="hover:text-emerald-600">الرئيسية</a>
-        <a href="morning.html" class="hover:text-emerald-600">اذكار الصباح</a>
-        <a href="evening.html" class="hover:text-emerald-600">اذكار المساء</a>
-        <a href="prayer.html" class="hover:text-emerald-600">اذكار بعد الصلاة</a>
+    <!-- زر قائمة الجوال -->
+    <button id="menuBtn" class="md:hidden text-3xl text-emerald-700">
+        ☰
+    </button>
 
-        <!-- الزر المتفعل -->
-        <a href="alkahf.html" class="text-white bg-emerald-600 px-3 py-1 rounded-lg font-bold">
-            سورة الكهف
-        </a>
+    <!-- الروابط (مخفيه في الجوال – تظهر في الكمبيوتر) -->
+    <div class="hidden md:flex items-center gap-4 text-lg font-medium">
 
-        <a href="friday.html" class="hover:text-emerald-600">سنن يوم الجمعه</a>
-        <a href="counter.html" class="hover:text-emerald-600">العداد</a>
+        <a href="index.html" class="nav-item">الرئيسية</a>
+        <a href="morning.html" class="nav-item">اذكار الصباح</a>
+        <a href="evening.html" class="nav-item">اذكار المساء</a>
+        <a href="prayer.html" class="nav-item">اذكار بعد الصلاة</a>
+        <a href="alkahf.html" class="nav-item">سورة الكهف</a>
+        <a href="friday.html" class="nav-item">سنن يوم الجمعه</a>
+        <a href="counter.html" class="nav-item">العداد</a>
+
     </div>
 
     <div>
-    <img src="images/tadabbur_log.png" alt="Tadabbur Logo" style="width: 70px;">
-</div>
+        <img src="images/tadabbur_log.png" alt="Tadabbur Logo" style="width: 70px;">
+    </div>
 
 </nav>
+
 
 <!-- HEADER -->
 <section class="text-center pt-10 pb-6">
